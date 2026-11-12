@@ -22,34 +22,16 @@ Explain the roles of the matrices $I$ and $0$, and describe the pattern you obse
 
 ## Solution
 
-$I$ is the identity matrix and $0$ is the zero matrix:
+Multiplying by $I$ does not change $A$, and adding the zero matrix does not change $A$:
 
 $$
-I=
-\begin{pmatrix}
-1 & 0 \\
-0 & 1 \\
-\end{pmatrix},\qquad 0=
-\begin{pmatrix}
-0 & 0 \\
-0 & 0 \\
-\end{pmatrix}
+AI=IA=A,\qquad A+0=A
 $$
 
-When I multiply $A$ by $I$, nothing changes, so $AI=IA=A$. When I add the zero matrix, nothing changes, so $A+0=A$. $I$ works like the number 1, and $0$ works like the number 0.
-
-Next I compute the powers of $A$:
+So $I$ works like the number 1 and $0$ works like the number 0.
 
 $$
 A^2=
-\begin{pmatrix}
-2 & 1 \\
-0 & 2 \\
-\end{pmatrix}
-\begin{pmatrix}
-2 & 1 \\
-0 & 2 \\
-\end{pmatrix}=
 \begin{pmatrix}
 4 & 4 \\
 0 & 4 \\
@@ -60,16 +42,4 @@ A^2=
 \end{pmatrix}
 $$
 
-The numbers on the diagonal are $2^n$. The number in the upper right corner is $n\cdot2^{n-1}$. So the pattern is:
-
-$$
-A^n=
-\begin{pmatrix}
-2^n & n2^{n-1} \\
-0 & 2^n \\
-\end{pmatrix}
-$$
-
-**Answer:** $AI=IA=A$, $A+0=A$, and $A^2$, $A^3$ are given above.
-
-**Check:** for $n=3$ the pattern gives $2^3=8$ and $3\cdot2^2=12$. This is the same as $A^3$.
+Pattern: on the diagonal there is $2^n$, and in the upper right corner there is $n\cdot2^{n-1}$ (for example $3\cdot4=12$).

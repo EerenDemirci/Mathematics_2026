@@ -17,8 +17,6 @@ Check the result by multiplication.
 
 ## Solution
 
-I start with $[A\mid I]$:
-
 $$
 \begin{pmatrix}
 1 & 1 & 0 & \mid & 1 & 0 & 0 \\
@@ -40,18 +38,6 @@ $$
 $R_3\leftarrow\frac12R_3$, then $R_2\leftarrow R_2-R_3$, then $R_1\leftarrow R_1-R_2$:
 
 $$
-\begin{pmatrix}
-1 & 0 & 0 & \mid & \frac12 & -\frac12 & \frac12 \\
-0 & 1 & 0 & \mid & \frac12 & \frac12 & -\frac12 \\
-0 & 0 & 1 & \mid & -\frac12 & \frac12 & \frac12 \\
-\end{pmatrix}
-$$
-
-The left side is $I$, so the right side is the inverse.
-
-**Answer:**
-
-$$
 A^{-1}=\frac12
 \begin{pmatrix}
 1 & -1 & 1 \\
@@ -60,7 +46,7 @@ A^{-1}=\frac12
 \end{pmatrix}
 $$
 
-**Check:** I multiply $A$ by the matrix in the bracket (without $\frac12$):
+Check by multiplication (I leave out the $\frac12$):
 
 $$
 \begin{pmatrix}
@@ -80,4 +66,4 @@ $$
 \end{pmatrix}
 $$
 
-With the factor $\frac12$ this is $I$, so the inverse is correct.
+With $\frac12$ this is $I$.

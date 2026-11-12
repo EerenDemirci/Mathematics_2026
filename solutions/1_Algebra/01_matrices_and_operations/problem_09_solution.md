@@ -31,44 +31,32 @@ compute $RSx$ and $SRx$. Compare the results and explain geometrically why the o
 
 ## Solution
 
-$RSx$ means: first I use $S$, then I use $R$. I work from right to left:
+$RSx$ means first $S$, then $R$:
 
 $$
 Sx=
 \begin{pmatrix}
 2 \\
 2 \\
-\end{pmatrix},\qquad RSx=R
-\begin{pmatrix}
-2 \\
-2 \\
-\end{pmatrix}=
+\end{pmatrix},\qquad RSx=
 \begin{pmatrix}
 -2 \\
 2 \\
 \end{pmatrix}
 $$
 
-$SRx$ means: first $R$, then $S$:
+$SRx$ means first $R$, then $S$:
 
 $$
 Rx=
 \begin{pmatrix}
 -2 \\
 1 \\
-\end{pmatrix},\qquad SRx=S
-\begin{pmatrix}
--2 \\
-1 \\
-\end{pmatrix}=
+\end{pmatrix},\qquad SRx=
 \begin{pmatrix}
 -4 \\
 1 \\
 \end{pmatrix}
 $$
 
-The results are different. $S$ makes only the horizontal part two times longer. In $RSx$ it stretches the first part of $x$. In $SRx$ the vector is rotated first, so the second part of $x$ moves to the horizontal direction and this part is stretched. That is why the order matters.
-
-**Answer:** $RSx=(-2,2)^T$ and $SRx=(-4,1)^T$, so $RSx\neq SRx$.
-
-**Check:** the lengths are different too: $|RSx|=\sqrt8$ and $|SRx|=\sqrt{17}$.
+The results are different. $S$ stretches only the horizontal direction. If I rotate first, a different part of the vector is in the horizontal direction, so a different part gets stretched. That is why the order matters.

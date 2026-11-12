@@ -22,7 +22,7 @@ Compare the successive elimination steps. Which part of the calculation is the s
 
 ## Solution
 
-Both systems have the same left side, so they have the same coefficient matrix. I write both right-hand sides in one augmented matrix:
+Both systems have the same left side, so I can write both right sides in one matrix:
 
 $$
 \begin{pmatrix}
@@ -31,7 +31,7 @@ $$
 \end{pmatrix}
 $$
 
-I do $R_2\leftarrow 2R_2-R_1$. This is the same step for both systems:
+$R_2\leftarrow 2R_2-R_1$:
 
 $$
 \begin{pmatrix}
@@ -40,12 +40,6 @@ $$
 \end{pmatrix}
 $$
 
-First system (first right column): $-3y=-3$, so $y=1$. Then $2x+1=5$, so $x=2$.
+First system: $y=1$, $x=2$. Second system: $y=-\frac73$, $x=\frac53$.
 
-Second system (second right column): $-3y=7$, so $y=-\frac73$. Then $2x-\frac73=1$, so $2x=\frac{10}{3}$ and $x=\frac53$.
-
-The elimination steps depend only on the coefficient matrix. So the steps are the same for both systems, and only the numbers on the right side are different. This is why I can solve both systems at the same time.
-
-**Answer:** first system $x=2$, $y=1$; second system $x=\frac53$, $y=-\frac73$.
-
-**Check:** first system: $4+1=5$ and $2-1=1$. Second system: $\frac{10}{3}-\frac73=1$ and $\frac53+\frac73=4$.
+The elimination steps are the same in both cases, because they depend only on the coefficient matrix. Only the right side numbers change.

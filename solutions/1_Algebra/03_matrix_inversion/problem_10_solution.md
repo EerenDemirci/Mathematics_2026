@@ -22,13 +22,7 @@ Without using Gauss–Jordan elimination, decide which matrix is invertible. For
 
 ## Solution
 
-For a diagonal matrix, the determinant is the product of the diagonal numbers. A diagonal matrix is invertible only when no number on the diagonal is 0.
-
-$D$ has $2,-3,5$ on the diagonal. None of them is 0, so $D$ is invertible ($\det D=-30$).
-
-$E$ has a 0 on the diagonal. Its second row is all zeros, so $\det E=0$ and $E$ is not invertible.
-
-The inverse of $D$ has the reciprocal $\frac1d$ of each diagonal number $d$:
+A diagonal matrix is invertible only if there is no 0 on the diagonal. $D$ has $2,-3,5$, so it is invertible. $E$ has a 0, so it is not invertible.
 
 $$
 D^{-1}=
@@ -39,6 +33,4 @@ D^{-1}=
 \end{pmatrix}
 $$
 
-**Answer:** $D$ is invertible with $D^{-1}$ above. $E$ is not invertible.
-
-**Check:** $DD^{-1}$ is diagonal with $2\cdot\frac12=1$, $(-3)\cdot(-\frac13)=1$ and $5\cdot\frac15=1$, so $DD^{-1}=I$.
+Check: $DD^{-1}$ has $2\cdot\frac12=1$, $(-3)\cdot(-\frac13)=1$ and $5\cdot\frac15=1$ on the diagonal, so it is $I$.

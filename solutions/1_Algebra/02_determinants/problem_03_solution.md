@@ -19,13 +19,11 @@ First predict $\det B$ using a determinant property, and then verify your predic
 
 ## Solution
 
-First I find $\det A$ with Sarrus' rule:
-
 $$
-\det A=(1\cdot3\cdot1+2\cdot1\cdot2+0)-(0+1\cdot1\cdot1+0)=7-1=6
+\det A=(3+4+0)-(0+1+0)=6
 $$
 
-Next I swap the first and the second row of $A$:
+$B$ is $A$ with the first two rows swapped:
 
 $$
 B=
@@ -36,14 +34,10 @@ B=
 \end{pmatrix}
 $$
 
-Prediction: when we swap two rows, the determinant changes its sign. So I expect $\det B=-6$.
-
-Now I calculate $\det B$ with Sarrus' rule:
+A row swap changes the sign of the determinant, so I expect $\det B=-6$. Calculation:
 
 $$
-\det B=(0+0+1\cdot1\cdot1)-(1\cdot2\cdot2+0+3\cdot1\cdot1)=1-7=-6
+\det B=(0+0+1)-(4+0+3)=-6
 $$
 
-**Answer:** $\det A=6$ and $\det B=-6$.
-
-**Check:** the calculation gives $-6$, which is the same as the prediction.
+The prediction was correct.

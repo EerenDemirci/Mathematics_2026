@@ -16,15 +16,7 @@ using the formula for a $2\times2$ matrix. At the end, check the result by compu
 
 ## Solution
 
-For a $2\times2$ matrix with entries $a,b,c,d$ the formula is: swap $a$ and $d$, change the sign of $b$ and $c$, and divide by the determinant.
-
-First I find the determinant:
-
-$$
-\det A=3\cdot4-2\cdot5=2
-$$
-
-It is not 0, so the inverse exists. Now I use the formula:
+$\det A=12-10=2$. For a $2\times2$ matrix I swap the numbers on the diagonal, change the sign of the other two, and divide by the determinant:
 
 $$
 A^{-1}=\frac12
@@ -38,15 +30,13 @@ A^{-1}=\frac12
 \end{pmatrix}
 $$
 
-**Answer:** $A^{-1}$ is the matrix above.
-
-**Check:** I multiply $A$ by $A^{-1}$ and I must get $I$:
+Check:
 
 $$
 AA^{-1}=
 \begin{pmatrix}
-3\cdot2+2\cdot(-\frac52) & 3\cdot(-1)+2\cdot\frac32 \\
-5\cdot2+4\cdot(-\frac52) & 5\cdot(-1)+4\cdot\frac32 \\
+6-5 & -3+3 \\
+10-10 & -5+6 \\
 \end{pmatrix}=
 \begin{pmatrix}
 1 & 0 \\

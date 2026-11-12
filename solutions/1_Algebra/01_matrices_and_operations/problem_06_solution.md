@@ -25,7 +25,7 @@ $$
 
 ## Solution
 
-The transpose changes rows into columns. So the first row of $A$ becomes the first column of $A^T$:
+In the transpose, rows become columns:
 
 $$
 A^T=
@@ -40,8 +40,6 @@ A^T=
 \end{pmatrix}
 $$
 
-$A$ is $2\times3$ and $B$ is $3\times2$, so $AB$ is a $2\times2$ matrix. I multiply rows of $A$ by columns of $B$:
-
 $$
 AB=
 \begin{pmatrix}
@@ -54,7 +52,7 @@ AB=
 \end{pmatrix}
 $$
 
-Now I compare both sides of the property. On the left side I transpose $AB$. On the right side I multiply $B^T$ by $A^T$:
+Now I check the property. I transpose $AB$, and I also multiply $B^T$ by $A^T$:
 
 $$
 (AB)^T=
@@ -72,6 +70,4 @@ $$
 \end{pmatrix}
 $$
 
-**Answer:** $A^T$, $B^T$ and $AB$ are given above, and $(AB)^T=B^TA^T$ is true in this example.
-
-**Check:** the order of the factors changes. $A^TB^T$ would be $3\times3$, so it cannot be equal to $(AB)^T$, which is $2\times2$.
+They are the same, so $(AB)^T=B^TA^T$.

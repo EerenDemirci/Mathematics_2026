@@ -16,7 +16,7 @@ Show the augmented matrix $[A\mid I]$ after successive operations and explain wh
 
 ## Solution
 
-I write the augmented matrix $[A\mid I]$ and use row operations until the left side is $I$:
+I start with $[A\mid I]$ and try to get $I$ on the left side:
 
 $$
 \begin{pmatrix}
@@ -25,16 +25,7 @@ $$
 \end{pmatrix}
 $$
 
-$R_2\leftarrow R_2-3R_1$:
-
-$$
-\begin{pmatrix}
-1 & 2 & \mid & 1 & 0 \\
-0 & -1 & \mid & -3 & 1 \\
-\end{pmatrix}
-$$
-
-$R_2\leftarrow -R_2$:
+$R_2\leftarrow R_2-3R_1$, then $R_2\leftarrow -R_2$:
 
 $$
 \begin{pmatrix}
@@ -52,11 +43,7 @@ $$
 \end{pmatrix}
 $$
 
-Now the left side is $I$, so the right side is $A^{-1}$.
-
-Why does this work? Every row operation is the same as multiplying from the left by some matrix. All operations together are one matrix $E$. On the left side we get $EA=I$, so $E=A^{-1}$. On the right side the same operations give $EI=E=A^{-1}$.
-
-**Answer:**
+So
 
 $$
 A^{-1}=
@@ -66,4 +53,4 @@ A^{-1}=
 \end{pmatrix}
 $$
 
-**Check:** $AA^{-1}$ has entries $1\cdot(-5)+2\cdot3=1$, $1\cdot2+2\cdot(-1)=0$, $3\cdot(-5)+5\cdot3=0$, $3\cdot2+5\cdot(-1)=1$, so $AA^{-1}=I$.
+This works because all the row operations together are like multiplying by one matrix $E$. On the left we get $EA=I$, so $E=A^{-1}$. On the right we get $EI=E$, which is $A^{-1}$.

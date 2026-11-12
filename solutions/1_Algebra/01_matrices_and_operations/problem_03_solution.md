@@ -18,21 +18,15 @@ determine whether they are defined. If so, state the size of the result. Justify
 
 ## Solution
 
-The product $XY$ of $X_{m\times n}$ and $Y_{p\times q}$ is defined only when $n=p$. This means the number of columns of the left matrix must be equal to the number of rows of the right matrix. Then the result has size $m\times q$.
+A product $XY$ exists only if the number of columns of $X$ is the same as the number of rows of $Y$. The result has the rows of $X$ and the columns of $Y$.
 
-I check every product with this rule:
-
-| Product | Inner sizes | Defined? | Size of result |
-|---|---|---|---|
-| $AB$ | $3=3$ | yes | $2\times4$ |
-| $BA$ | $4\neq2$ | no | — |
-| $BC$ | $4=4$ | yes | $3\times2$ |
-| $CB$ | $2\neq3$ | no | — |
-| $AC$ | $3\neq4$ | no | — |
-| $CA$ | $2=2$ | yes | $4\times3$ |
-| $AD$ | $3\neq2$ | no | — |
-| $DA$ | $2=2$ | yes | $2\times3$ |
-
-**Answer:** $AB$, $BC$, $CA$ and $DA$ are defined. $BA$, $CB$, $AC$ and $AD$ are not defined.
-
-**Check:** one entry of a product is a row times a column. A row of the left matrix and a column of the right matrix must have the same length, so the rule is correct. The table also shows that $AB$ can exist when $BA$ does not.
+| Product | Sizes | Result |
+|---|---|---|
+| $AB$ | $(2\times3)(3\times4)$ | $2\times4$ |
+| $BA$ | $(3\times4)(2\times3)$ | not defined, $4\neq2$ |
+| $BC$ | $(3\times4)(4\times2)$ | $3\times2$ |
+| $CB$ | $(4\times2)(3\times4)$ | not defined, $2\neq3$ |
+| $AC$ | $(2\times3)(4\times2)$ | not defined, $3\neq4$ |
+| $CA$ | $(4\times2)(2\times3)$ | $4\times3$ |
+| $AD$ | $(2\times3)(2\times2)$ | not defined, $3\neq2$ |
+| $DA$ | $(2\times2)(2\times3)$ | $2\times3$ |

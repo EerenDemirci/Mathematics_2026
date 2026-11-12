@@ -20,8 +20,6 @@ Find the conditions on $a,b,c,d$ under which $AB=BA$. Describe the general form 
 
 ## Solution
 
-I compute both products with the unknown matrix $B$:
-
 $$
 AB=
 \begin{pmatrix}
@@ -34,26 +32,14 @@ c & c+d \\
 \end{pmatrix}
 $$
 
-$AB=BA$ means that all entries are equal. From the first entry, $a+c=a$, so $c=0$. From the second entry, $b+d=a+b$, so $d=a$. The last entry gives $d=c+d$, so again $c=0$. The number $b$ can be any number.
+I compare the numbers. From $a+c=a$ I get $c=0$. From $b+d=a+b$ I get $d=a$. The number $b$ can be anything.
 
-So the matrix $B$ must look like this:
+So $AB=BA$ only for matrices of this form:
 
 $$
 B=
 \begin{pmatrix}
 a & b \\
 0 & a \\
-\end{pmatrix},\qquad a,b\in\mathbb{R}
-$$
-
-**Answer:** $AB=BA$ exactly when $c=0$ and $d=a$.
-
-**Check:** I take $a=2$ and $b=3$. Then both products give the same matrix:
-
-$$
-AB=BA=
-\begin{pmatrix}
-2 & 5 \\
-0 & 2 \\
 \end{pmatrix}
 $$

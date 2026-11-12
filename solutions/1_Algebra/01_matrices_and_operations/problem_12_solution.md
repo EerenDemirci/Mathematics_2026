@@ -16,8 +16,6 @@ Compute $A^2$, $A^3$, and $A^4$, and use them to formulate a conjecture for $A^n
 
 ## Solution
 
-I compute the first powers of $A$:
-
 $$
 A^2=
 \begin{pmatrix}
@@ -34,7 +32,7 @@ A^2=
 \end{pmatrix}
 $$
 
-Only the upper right number changes, and it is equal to the power. So my conjecture is:
+Only the upper right number grows, so I think:
 
 $$
 A^n=
@@ -44,10 +42,10 @@ A^n=
 \end{pmatrix}
 $$
 
-Now I show that the formula works for the next power. I assume it is true for $n$ and multiply by $A$:
+If this is true for $n$, I multiply by $A$ once more:
 
 $$
-A^{n+1}=A^nA=
+A^nA=
 \begin{pmatrix}
 1 & n \\
 0 & 1 \\
@@ -62,8 +60,4 @@ A^{n+1}=A^nA=
 \end{pmatrix}
 $$
 
-This is the same formula with $n+1$. The formula is also true for $n=1$, so by induction it is true for every $n$.
-
-**Answer:** $A^n$ has 1 on the diagonal, 0 in the lower left corner and $n$ in the upper right corner.
-
-**Check:** for $n=4$ the formula gives the same matrix as the direct computation of $A^4$.
+This is the formula for $n+1$, so the formula is true for all $n$.

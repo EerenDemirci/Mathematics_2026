@@ -25,7 +25,7 @@ Compute $(AB)C$ and $A(BC)$. Compare the results and the number of intermediate 
 
 ## Solution
 
-First path: I compute $AB$ first, and then I multiply by $C$:
+First $(AB)C$:
 
 $$
 AB=
@@ -39,7 +39,7 @@ AB=
 \end{pmatrix}
 $$
 
-Second path: I compute $BC$ first, and then I multiply $A$ by it:
+Then $A(BC)$:
 
 $$
 BC=
@@ -54,13 +54,4 @@ BC=
 \end{pmatrix}
 $$
 
-Both paths give the same matrix. This is associativity: $(AB)C=A(BC)$. The brackets do not change the result, but they change the amount of work. A product of an $m\times n$ and an $n\times q$ matrix needs $m\cdot n\cdot q$ multiplications:
-
-| Path | First product | Second product | Total |
-|---|---|---|---|
-| $(AB)C$ | $2\cdot3\cdot2=12$ | $2\cdot2\cdot2=8$ | 20 |
-| $A(BC)$ | $3\cdot2\cdot2=12$ | $2\cdot3\cdot2=12$ | 24 |
-
-**Answer:** $(AB)C=A(BC)$ is the matrix above. The first path needs 20 multiplications and the second path needs 24.
-
-**Check:** I computed the two paths separately and got the same matrix.
+The result is the same. This is associativity: the brackets do not change the answer. But the work is different: $(AB)C$ needs $12+8=20$ multiplications and $A(BC)$ needs $12+12=24$.

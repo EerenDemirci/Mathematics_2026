@@ -23,9 +23,7 @@ Write the matrix after each step. Then, for each of the three operations, state 
 
 ## Solution
 
-I do the three operations in order and write the matrix after each step.
-
-Step 1, $R_2\leftarrow R_2-2R_1$. The new second row is $(2,4,1)-2(1,2,-1)=(0,0,3)$:
+After $R_2\leftarrow R_2-2R_1$:
 
 $$
 \begin{pmatrix}
@@ -35,7 +33,7 @@ $$
 \end{pmatrix}
 $$
 
-Step 2, $R_3\leftarrow R_3+R_1$. The new third row is $(-1,1,3)+(1,2,-1)=(0,3,2)$:
+After $R_3\leftarrow R_3+R_1$:
 
 $$
 \begin{pmatrix}
@@ -45,7 +43,7 @@ $$
 \end{pmatrix}
 $$
 
-Step 3, I swap $R_2$ and $R_3$:
+After swapping $R_2$ and $R_3$:
 
 $$
 \begin{pmatrix}
@@ -55,14 +53,8 @@ $$
 \end{pmatrix}
 $$
 
-Every row operation can be undone:
+Reverse operations:
 
-| Operation | Reverse operation |
-|---|---|
-| $R_2\leftarrow R_2-2R_1$ | $R_2\leftarrow R_2+2R_1$ |
-| $R_3\leftarrow R_3+R_1$ | $R_3\leftarrow R_3-R_1$ |
-| $R_2\leftrightarrow R_3$ | $R_2\leftrightarrow R_3$ again |
-
-**Answer:** the matrices after the three steps are shown above, and the reverse operations are in the table.
-
-**Check:** I use the determinant. For the start matrix, $\det A=11-14-6=-9$. The last matrix is triangular, so its determinant is $1\cdot3\cdot3=9$. Steps 1 and 2 do not change the determinant, and the swap changes the sign, so $-9$ becomes $9$. This is correct.
+1. $R_2\leftarrow R_2-2R_1$ is undone by $R_2\leftarrow R_2+2R_1$.
+2. $R_3\leftarrow R_3+R_1$ is undone by $R_3\leftarrow R_3-R_1$.
+3. A swap is undone by the same swap.

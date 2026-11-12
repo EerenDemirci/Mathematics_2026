@@ -20,24 +20,6 @@ For case 1, carry out the chosen method completely. For cases 2 and 3, describe 
 
 ## Solution
 
-**Case 1.** The matrix is triangular, so the best method is back substitution. I start with the last equation:
-
-$$
-4y=8\quad\Longrightarrow\quad y=2
-$$
-
-Then I put $y=2$ into the first equation:
-
-$$
-2x-2=3\quad\Longrightarrow\quad x=\frac52
-$$
-
-No elimination is needed, because the matrix is already triangular.
-
-**Case 2.** $A^{-1}$ is already known, and there are three right-hand sides. So the best plan is $x_i=A^{-1}b_i$ for $i=1,2,3$. This is only three matrix-times-vector products. The hard part, finding $A^{-1}$, is already done and I can use it again for every $b_i$.
-
-**Case 3.** The inverse is not given and I need only one solution. The best plan is Gaussian elimination on the augmented matrix $[A\mid b]$ and then back substitution. Computing $A^{-1}$ first would be extra work, because I need it for only one right-hand side.
-
-**Answer:** case 1: back substitution, $x=\frac52$, $y=2$; case 2: multiply by the known $A^{-1}$; case 3: Gaussian elimination.
-
-**Check:** for case 1, $2\cdot\frac52-2=3$ and $4\cdot2=8$. Both equations are true.
+1. The matrix is triangular, so I use back substitution. From $4y=8$ I get $y=2$. Then $2x-2=3$, so $x=\frac52$.
+2. $A^{-1}$ is already known, so I just compute $x_i=A^{-1}b_i$ for the three vectors. The inverse is used again for each $b_i$, so the hard part is done only once.
+3. For one system without $A^{-1}$, I use Gaussian elimination on $[A\mid b]$. Computing the inverse would be extra work that I do not need.

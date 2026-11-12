@@ -26,20 +26,10 @@ Check the consistency of each system and explain why a small change in one numbe
 
 ## Solution
 
-Both systems have the same first two equations. I add them:
+In both systems the first two equations give $3x=3$ (I add them), so $x=1$ and $y=1$.
 
-$$
-(x+y)+(2x-y)=2+1\quad\Longrightarrow\quad 3x=3\quad\Longrightarrow\quad x=1
-$$
+First system: the third equation $3x=3$ is true for $x=1$. The system is consistent, with one solution $(1,1)$.
 
-Then $y=2-x=1$. So the first two equations already give only one point, $(1,1)$.
+Second system: the third equation needs $3x=3.1$, but $x=1$ gives $3$. This is a contradiction, so there is no solution.
 
-**First system.** The third equation is $3x=3$. For $x=1$ it is true. So the system is consistent and has exactly one solution, $(1,1)$.
-
-**Second system.** The third equation is $3x=3.1$. But the first two equations say $3x=3$. With elimination, $R_3-R_1-R_2$ gives $0=0.1$, which is not possible. So the system is inconsistent and has no solution.
-
-Why can a small change matter? There are 3 equations and only 2 unknowns. The first two lines already meet in one point. The third line must go exactly through this point. If I change one number even a little, the third line moves and misses the point.
-
-**Answer:** first system: one solution $(1,1)$. Second system: no solution.
-
-**Check:** $(1,1)$ in the first system: $1+1=2$, $2-1=1$, $3\cdot1=3$. In the second system: $3\cdot1=3\neq3.1$.
+With two unknowns, two equations already fix one point. The third equation must go exactly through this point. A small change in one number moves it away from the point, so the system becomes inconsistent.

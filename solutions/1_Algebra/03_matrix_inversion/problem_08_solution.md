@@ -16,7 +16,7 @@ describes a scaling of the plane. Find $S^{-1}$ and explain geometrically what t
 
 ## Solution
 
-$S$ is a diagonal matrix, so its inverse has the reciprocal $\frac1d$ of each diagonal number $d$:
+$S$ is diagonal, so I take $1$ divided by each number on the diagonal:
 
 $$
 S^{-1}=
@@ -26,24 +26,6 @@ S^{-1}=
 \end{pmatrix}
 $$
 
-In geometry, $S$ makes the $x$ direction 2 times longer and the $y$ direction 2 times shorter. The inverse does the opposite: it makes the $x$ direction 2 times shorter and the $y$ direction 2 times longer. So $S^{-1}$ undoes $S$.
+$S$ makes the $x$ direction 2 times longer and the $y$ direction 2 times shorter. $S^{-1}$ does the opposite, so it brings the plane back.
 
-**Answer:** $S^{-1}=\mathrm{diag}\left(\frac12,2\right)$.
-
-**Check:** I take the vector $v=(1,1)^T$:
-
-$$
-Sv=
-\begin{pmatrix}
-2 \\
-\frac12 \\
-\end{pmatrix},\qquad S^{-1}(Sv)=
-\begin{pmatrix}
-\frac12\cdot2 \\
-2\cdot\frac12 \\
-\end{pmatrix}=
-\begin{pmatrix}
-1 \\
-1 \\
-\end{pmatrix}=v
-$$
+Check with $v=(1,1)^T$: $Sv=(2,\frac12)^T$ and $S^{-1}(2,\frac12)^T=(1,1)^T$.

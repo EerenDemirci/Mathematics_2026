@@ -17,9 +17,7 @@ find $\det A$ by simplifying the matrix with row operations. At each step, indic
 
 ## Solution
 
-I want to make zeros under the diagonal. The operation "add a multiple of one row to another row" does not change the determinant.
-
-Step 1: $R_2\leftarrow R_2-2R_1$ and $R_3\leftarrow R_3+R_1$. The determinant does not change:
+$R_2\leftarrow R_2-2R_1$ and $R_3\leftarrow R_3+R_1$ (adding a multiple of a row, so the determinant does not change):
 
 $$
 \begin{pmatrix}
@@ -29,7 +27,7 @@ $$
 \end{pmatrix}
 $$
 
-Step 2: $R_3\leftarrow R_3+2R_2$. The determinant does not change:
+$R_3\leftarrow R_3+2R_2$ (also no change):
 
 $$
 \begin{pmatrix}
@@ -39,16 +37,8 @@ $$
 \end{pmatrix}
 $$
 
-Step 3: now the matrix is triangular, so I multiply the diagonal:
+Now the matrix is triangular:
 
 $$
 \det A=1\cdot(-3)\cdot(-7)=21
-$$
-
-**Answer:** $\det A=21$.
-
-**Check:** I expand the start matrix along the first row:
-
-$$
-\det A=1\cdot(2-0)-2\cdot(4-0)+3\cdot(8+1)=2-8+27=21
 $$

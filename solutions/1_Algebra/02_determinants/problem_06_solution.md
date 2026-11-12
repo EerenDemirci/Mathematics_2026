@@ -16,20 +16,14 @@ find all values of $t$ for which the matrix is not invertible. Explain how your 
 
 ## Solution
 
-First I find the determinant of $A(t)$:
-
 $$
-\det A(t)=t\cdot t-1\cdot2=t^2-2
+\det A(t)=t^2-2
 $$
 
-A matrix is not invertible when its determinant is 0. So I solve this equation:
+The matrix is not invertible when the determinant is 0:
 
 $$
 t^2-2=0\quad\Longrightarrow\quad t=\sqrt2\quad\mathrm{or}\quad t=-\sqrt2
 $$
 
-For all other values of $t$ the determinant is not 0, so the matrix is invertible.
-
-**Answer:** $A(t)$ is not invertible for $t=\sqrt2$ and $t=-\sqrt2$.
-
-**Check:** for $t=\sqrt2$ the rows are $(\sqrt2,1)$ and $(2,\sqrt2)$. If I multiply the first row by $\sqrt2$, I get the second row. The rows are dependent, so the determinant must be 0.
+For these two values the determinant is zero, so there is no inverse. For all other $t$ the matrix is invertible.

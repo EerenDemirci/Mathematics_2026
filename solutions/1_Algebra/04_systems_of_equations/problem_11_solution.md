@@ -16,14 +16,9 @@ Use elimination and separately analyze the parameter values for which a standard
 
 ## Solution
 
-I write the augmented matrix and subtract the first row from the other rows:
+I subtract the first row from the other two:
 
 $$
-\begin{pmatrix}
-1 & 1 & 1 & \mid & 1 \\
-1 & t & 1 & \mid & 2 \\
-1 & 1 & t & \mid & 3 \\
-\end{pmatrix}\ \longrightarrow\
 \begin{pmatrix}
 1 & 1 & 1 & \mid & 1 \\
 0 & t-1 & 0 & \mid & 1 \\
@@ -31,18 +26,8 @@ $$
 \end{pmatrix}
 $$
 
-The next step is to divide by $t-1$. This step works only when $t-1\neq0$, so I look at two cases.
+Now I need to divide by $t-1$, and this is only allowed when $t\neq1$.
 
-**Case $t\neq1$.** I can divide:
+If $t\neq1$: $y=\frac{1}{t-1}$, $z=\frac{2}{t-1}$ and $x=1-y-z=\frac{t-4}{t-1}$. There is exactly one solution.
 
-$$
-y=\frac{1}{t-1},\qquad z=\frac{2}{t-1},\qquad x=1-y-z=1-\frac{3}{t-1}=\frac{t-4}{t-1}
-$$
-
-So there is exactly one solution.
-
-**Case $t=1$.** The division is not allowed. The second and third rows become $0=1$ and $0=2$. This is not possible, so there is no solution.
-
-**Answer:** $t\neq1$: exactly one solution (formulas above). $t=1$: no solution. Infinitely many solutions never happen.
-
-**Check:** for $t=2$ the formulas give $x=-2$, $y=1$, $z=2$. Then $-2+1+2=1$, $-2+2+2=2$, $-2+1+4=3$. All equations are true.
+If $t=1$: the rows become $0=1$ and $0=2$, so there is no solution.

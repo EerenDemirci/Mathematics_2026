@@ -17,8 +17,6 @@ Identify the coefficient matrix, the vector of unknowns, and the right-hand side
 
 ## Solution
 
-Each equation gives one row of the matrix. The numbers in front of $x$, $y$, $z$ are the coefficients. So the system is $Ax=b$ with:
-
 $$
 A=
 \begin{pmatrix}
@@ -38,10 +36,4 @@ z \\
 \end{pmatrix}
 $$
 
-$A$ is the coefficient matrix, $x$ is the vector of unknowns and $b$ is the right-hand side vector.
-
-Row $i$ of $A$ times the vector $x$ gives the left side of equation $i$. For example, the first row gives $2x-y+z$, and this must be equal to the first number of $b$, which is 4.
-
-**Answer:** $Ax=b$ with $A$, $x$ and $b$ above.
-
-**Check:** I multiply all rows by $x$: $2x-y+z$, $x+3y-2z$, $3x+y+z$. These are exactly the left sides of the three equations, and $b=(4,1,7)^T$ has the right sides.
+$A$ is the coefficient matrix, $x$ is the vector of unknowns and $b$ is the right-hand side. Each row of $A$ has the numbers from one equation. For example, the first row times $x$ is $2x-y+z$, which is the left side of the first equation.
