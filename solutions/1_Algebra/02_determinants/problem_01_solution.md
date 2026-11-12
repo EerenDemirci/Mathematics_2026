@@ -1,6 +1,26 @@
-# Exercise 1
+# Exercise 1. Determinant of a 2×2 Matrix
 
-**Answer**
+## Question
+
+Compute
+
+$$
+\det
+\begin{pmatrix}
+3 & -2 \\
+5 & 4 \\
+\end{pmatrix},\qquad \det
+\begin{pmatrix}
+1 & 7 \\
+2 & 14 \\
+\end{pmatrix}.
+$$
+
+Which matrix is invertible? Justify your answer.
+
+## Solution
+
+For a $2\times2$ matrix the determinant is $ad-bc$. I use this formula for both matrices:
 
 $$
 \det
@@ -11,11 +31,11 @@ $$
 \begin{pmatrix}
 1 & 7 \\
 2 & 14 \\
-\end{pmatrix}=14-14=0
+\end{pmatrix}=1\cdot14-7\cdot2=0
 $$
 
-The first matrix is invertible, the second is not.
+A matrix is invertible only when its determinant is not zero. The first determinant is 22, so the first matrix is invertible. The second determinant is 0, so the second matrix is not invertible.
 
-**Rule:** for a $2\times2$ matrix $\det=ad-bc$; a matrix is invertible exactly when $\det\neq0$.
+**Answer:** the determinants are 22 and 0. Only the first matrix is invertible.
 
-**Check:** in the second matrix row 2 is $2\cdot$ row 1, so its determinant must be $0$.
+**Check:** in the second matrix the second row is two times the first row: $(2,14)=2\cdot(1,7)$. Rows like this always give determinant 0.

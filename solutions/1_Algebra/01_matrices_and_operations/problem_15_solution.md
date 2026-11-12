@@ -1,6 +1,31 @@
-# Exercise 15
+# Exercise 15. Associativity of Multiplication and Different Calculation Paths
 
-**Path 1**
+## Question
+
+Given
+
+$$
+A=
+\begin{pmatrix}
+1 & 2 & 0 \\
+0 & 1 & 1 \\
+\end{pmatrix},\quad B=
+\begin{pmatrix}
+1 & 0 \\
+2 & 1 \\
+-1 & 3 \\
+\end{pmatrix},\quad C=
+\begin{pmatrix}
+2 & 1 \\
+0 & -1 \\
+\end{pmatrix}.
+$$
+
+Compute $(AB)C$ and $A(BC)$. Compare the results and the number of intermediate operations. Explain what associativity of matrix multiplication means in this example.
+
+## Solution
+
+First path: I compute $AB$ first, and then I multiply by $C$:
 
 $$
 AB=
@@ -14,7 +39,7 @@ AB=
 \end{pmatrix}
 $$
 
-**Path 2**
+Second path: I compute $BC$ first, and then I multiply $A$ by it:
 
 $$
 BC=
@@ -29,8 +54,13 @@ BC=
 \end{pmatrix}
 $$
 
-**Operations:** $(AB)C$: $12+8=20$ multiplications; $A(BC)$: $12+12=24$ multiplications.
+Both paths give the same matrix. This is associativity: $(AB)C=A(BC)$. The brackets do not change the result, but they change the amount of work. A product of an $m\times n$ and an $n\times q$ matrix needs $m\cdot n\cdot q$ multiplications:
 
-**Rule:** associativity: $(AB)C=A(BC)$; brackets change the work, not the result.
+| Path | First product | Second product | Total |
+|---|---|---|---|
+| $(AB)C$ | $2\cdot3\cdot2=12$ | $2\cdot2\cdot2=8$ | 20 |
+| $A(BC)$ | $3\cdot2\cdot2=12$ | $2\cdot3\cdot2=12$ | 24 |
 
-**Check:** both paths give the same matrix.
+**Answer:** $(AB)C=A(BC)$ is the matrix above. The first path needs 20 multiplications and the second path needs 24.
+
+**Check:** I computed the two paths separately and got the same matrix.

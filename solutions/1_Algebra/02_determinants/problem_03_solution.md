@@ -1,14 +1,31 @@
-# Exercise 3
+# Exercise 3. Swapping Two Rows
 
-**Answer:** $\det A=6$, $\det B=-6$.
+## Question
 
-**Steps**
+For
 
 $$
-\det A=(3+4+0)-(0+1+0)=6
+A=
+\begin{pmatrix}
+1 & 2 & 0 \\
+0 & 3 & 1 \\
+2 & 1 & 1 \\
+\end{pmatrix}
 $$
 
-$B$ = $A$ with rows 1 and 2 swapped:
+compute $\det A$. Then form a matrix $B$ by swapping the first and second rows of $A$.
+
+First predict $\det B$ using a determinant property, and then verify your prediction by calculation.
+
+## Solution
+
+First I find $\det A$ with Sarrus' rule:
+
+$$
+\det A=(1\cdot3\cdot1+2\cdot1\cdot2+0)-(0+1\cdot1\cdot1+0)=7-1=6
+$$
+
+Next I swap the first and the second row of $A$:
 
 $$
 B=
@@ -19,10 +36,14 @@ B=
 \end{pmatrix}
 $$
 
-**Prediction:** a row swap changes the sign, so $\det B=-6$.
+Prediction: when we swap two rows, the determinant changes its sign. So I expect $\det B=-6$.
 
-**Check (calculation):**
+Now I calculate $\det B$ with Sarrus' rule:
 
 $$
-\det B=(0+0+1)-(4+0+3)=-6
+\det B=(0+0+1\cdot1\cdot1)-(1\cdot2\cdot2+0+3\cdot1\cdot1)=1-7=-6
 $$
+
+**Answer:** $\det A=6$ and $\det B=-6$.
+
+**Check:** the calculation gives $-6$, which is the same as the prediction.

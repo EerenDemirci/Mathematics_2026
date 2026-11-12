@@ -1,10 +1,25 @@
-# Exercise 13
+# Exercise 13. Determinant by Elimination
 
-**Answer:** $\det A=1$.
+## Question
 
-**Steps** (none of them changes $\det$)
+Compute the determinant
 
-$R_2\leftarrow R_2-2R_1$, $R_3\leftarrow R_3-R_1$:
+$$
+A=
+\begin{pmatrix}
+1 & 2 & 3 \\
+2 & 5 & 7 \\
+1 & 0 & 2 \\
+\end{pmatrix}
+$$
+
+using elimination. Record the effect of every row operation used on the value of the determinant.
+
+## Solution
+
+I use elimination. I only add multiples of rows to other rows, so the determinant never changes.
+
+Step 1: $R_2\leftarrow R_2-2R_1$ and $R_3\leftarrow R_3-R_1$ (no change of the determinant):
 
 $$
 \begin{pmatrix}
@@ -14,16 +29,22 @@ $$
 \end{pmatrix}
 $$
 
-$R_3\leftarrow R_3+2R_2$:
+Step 2: $R_3\leftarrow R_3+2R_2$ (no change of the determinant):
 
 $$
 \begin{pmatrix}
 1 & 2 & 3 \\
 0 & 1 & 1 \\
 0 & 0 & 1 \\
-\end{pmatrix},\qquad \det=1\cdot1\cdot1=1
+\end{pmatrix}
 $$
 
-**Rule:** only $R_i\leftarrow R_i+cR_j$ was used, so no correction is needed.
+Step 3: the matrix is triangular, so I multiply the diagonal:
 
-**Check (Sarrus):** $(10+14+0)-(15+0+8)=24-23=1$.
+$$
+\det A=1\cdot1\cdot1=1
+$$
+
+**Answer:** $\det A=1$.
+
+**Check:** Sarrus' rule for the start matrix gives $(10+14+0)-(15+0+8)=24-23=1$.

@@ -1,6 +1,26 @@
-# Exercise 11
+# Exercise 11. When Do Matrices Commute?
 
-**Steps**
+## Question
+
+Given
+
+$$
+A=
+\begin{pmatrix}
+1 & 1 \\
+0 & 1 \\
+\end{pmatrix},\qquad B=
+\begin{pmatrix}
+a & b \\
+c & d \\
+\end{pmatrix}.
+$$
+
+Find the conditions on $a,b,c,d$ under which $AB=BA$. Describe the general form of all such matrices $B$.
+
+## Solution
+
+I compute both products with the unknown matrix $B$:
 
 $$
 AB=
@@ -14,9 +34,9 @@ c & c+d \\
 \end{pmatrix}
 $$
 
-Equal entries: $a+c=a$ gives $c=0$; $b+d=a+b$ gives $d=a$.
+$AB=BA$ means that all entries are equal. From the first entry, $a+c=a$, so $c=0$. From the second entry, $b+d=a+b$, so $d=a$. The last entry gives $d=c+d$, so again $c=0$. The number $b$ can be any number.
 
-**Answer**
+So the matrix $B$ must look like this:
 
 $$
 B=
@@ -26,7 +46,9 @@ a & b \\
 \end{pmatrix},\qquad a,b\in\mathbb{R}
 $$
 
-**Check:** for $a=2$, $b=3$:
+**Answer:** $AB=BA$ exactly when $c=0$ and $d=a$.
+
+**Check:** I take $a=2$ and $b=3$. Then both products give the same matrix:
 
 $$
 AB=BA=
