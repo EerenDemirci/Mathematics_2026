@@ -1,17 +1,33 @@
+# Exercise 1. Vector Operations and Their Meaning
+
 ## Question
 
-For $u=(2,-1,3)$ and $v=(-1,4,2)$, compute $u+v$, $u-v$, and $3u-2v$; verify $(u+v)-v=u$ and explain vector addition geometrically.
+For $u=(2,-1,3)$ and $v=(-1,4,2)$ compute
+
+$$
+u+v,\qquad u-v,\qquad 3u-2v.
+$$
+
+Then verify that $(u+v)-v=u$, and explain geometrically what adding two vectors means.
 
 ## Solution
 
-Vector operations are performed coordinate by coordinate:
+Vectors are added and subtracted coordinate by coordinate:
 
-$$u+v=(1,3,5),\qquad u-v=(3,-5,1),$$
+$$
+u+v=(2-1,\ -1+4,\ 3+2)=(1,3,5),\qquad u-v=(2+1,\ -1-4,\ 3-2)=(3,-5,1)
+$$
 
-$$3u-2v=(6,-3,9)-(-2,8,4)=(8,-11,5).$$
+For $3u-2v$ I first multiply, then subtract:
 
-The requested check gives
+$$
+3u-2v=(6,-3,9)-(-2,8,4)=(8,-11,5)
+$$
 
-$$(u+v)-v=(1,3,5)-(-1,4,2)=(2,-1,3)=u.$$
+Check:
 
-Geometrically, adding vectors means placing the tail of the second vector at the head of the first; the sum is the displacement from the original tail to the final head (equivalently, the diagonal of the parallelogram).
+$$
+(u+v)-v=(1+1,\ 3-4,\ 5-2)=(2,-1,3)=u
+$$
+
+Geometrically, $u+v$ means: go along $u$, and then from its end go along $v$. The sum is the arrow from the start to the final point. It is also the diagonal of the parallelogram made by $u$ and $v$.

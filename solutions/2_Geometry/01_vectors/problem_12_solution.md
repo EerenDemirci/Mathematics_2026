@@ -1,23 +1,27 @@
+# Exercise 12. A Normal Vector to a Plane
+
 ## Question
 
-For $A=(1,0,2)$, $B=(2,1,0)$, and $C=(0,3,1)$, construct two in-plane vectors, find a vector perpendicular to both, and check it with dot products.
+Given $A=(1,0,2)$, $B=(2,1,0)$, and $C=(0,3,1)$. Construct two vectors lying in the plane, find a vector perpendicular to both, and check the perpendicularity using dot products.
 
 ## Solution
 
-Two vectors in the plane are
+Two vectors in the plane:
 
-$$\overrightarrow{AB}=(1,1,-2),\qquad \overrightarrow{AC}=(-1,3,-1).$$
+$$
+\overrightarrow{AB}=(1,1,-2),\qquad \overrightarrow{AC}=(-1,3,-1)
+$$
 
-Their cross product is
+The cross product is perpendicular to both of them:
 
-$$\overrightarrow{AB}\times\overrightarrow{AC}=(5,3,4).$$
+$$
+n=\overrightarrow{AB}\times\overrightarrow{AC}=(1\cdot(-1)-(-2)\cdot3,\ (-2)\cdot(-1)-1\cdot(-1),\ 1\cdot3-1\cdot(-1))=(5,3,4)
+$$
 
-Thus $n=(5,3,4)$ is a normal vector to the plane through the three points.
+Check:
 
-The requested dot-product checks are
+$$
+n\cdot\overrightarrow{AB}=5+3-8=0,\qquad n\cdot\overrightarrow{AC}=-5+9-4=0
+$$
 
-$$n\cdot\overrightarrow{AB}=5+3-8=0,$$
-
-$$n\cdot\overrightarrow{AC}=-5+9-4=0.$$
-
-Both in-plane directions are perpendicular to $n$, which verifies that $n$ is a normal vector.
+So $n=(5,3,4)$ is a normal vector of the plane through $A$, $B$ and $C$.

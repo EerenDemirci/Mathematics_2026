@@ -1,15 +1,32 @@
+# Exercise 8. Linear Combination and Checking the Result
+
 ## Question
 
-Determine whether $w=(5,1)$ is $au+bv$ for $u=(1,1)$ and $v=(2,-1)$; find and check the coefficients and explain their geometric meaning.
+Check whether $w=(5,1)$ can be written as
+
+$$
+w=au+bv,
+$$
+
+where $u=(1,1)$ and $v=(2,-1)$. If so, find $a,b$, reconstruct $w$ from them, and explain the geometric meaning of the existence of such coefficients.
 
 ## Solution
 
-Equating coordinates in $au+bv=w$ gives
+I write $w=au+bv$ coordinate by coordinate:
 
-$$a+2b=5,\qquad a-b=1.$$
+$$
+\begin{cases}
+a+2b=5, \\
+a-b=1.
+\end{cases}
+$$
 
-Subtracting the second equation from the first gives $3b=4$, hence $b=4/3$ and $a=1+b=7/3$. Reconstruction checks the answer:
+Subtracting the second equation from the first gives $3b=4$, so $b=\frac43$. Then $a=1+b=\frac73$.
 
-$$\frac73(1,1)+\frac43(2,-1)=\left(\frac{15}{3},\frac{3}{3}\right)=(5,1).$$
+Check:
 
-Geometrically, the coefficients describe the directed amounts of the two nonparallel directions needed to reach $w$; since $u$ and $v$ span the plane, such coordinates exist uniquely.
+$$
+\frac73(1,1)+\frac43(2,-1)=\left(\frac73+\frac83,\ \frac73-\frac43\right)=(5,1)=w
+$$
+
+The vectors $u$ and $v$ are not parallel, so together they cover the whole plane. That is why such numbers $a,b$ exist. They are the "coordinates" of $w$ if we use $u$ and $v$ as the directions of the grid.

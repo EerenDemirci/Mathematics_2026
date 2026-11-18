@@ -1,19 +1,29 @@
+# Exercise 6. Projection and Perpendicular Component
+
 ## Question
 
-Project $u=(4,2)$ onto $v=(1,1)$, compute the residual $r$, verify $r\cdot v=0$, and explain the result geometrically.
+Find the projection of $u=(4,2)$ onto the direction $v=(1,1)$. Then compute
+
+$$
+r=u-\mathrm{proj}_v\,u
+$$
+
+and verify that $r\cdot v=0$. Explain this result geometrically.
 
 ## Solution
 
-Using the projection formula,
+The projection of $u$ onto the direction $v$ is:
 
-$$\operatorname{proj}_v u=\frac{u\cdot v}{v\cdot v}v=\frac{6}{2}(1,1)=(3,3).$$
+$$
+\mathrm{proj}_v\,u=\frac{u\cdot v}{v\cdot v}\,v=\frac{4+2}{1+1}(1,1)=3(1,1)=(3,3)
+$$
 
-Thus
+The rest of $u$ is:
 
-$$r=u-\operatorname{proj}_v u=(4,2)-(3,3)=(1,-1),$$
+$$
+r=u-\mathrm{proj}_v\,u=(4,2)-(3,3)=(1,-1)
+$$
 
-and the requested calculation is
+Check: $r\cdot v=1\cdot1+(-1)\cdot1=0$.
 
-$$r\cdot v=(1,-1)\cdot(1,1)=1-1=0.$$
-
-The projection $(3,3)$ is parallel to $v$, so it is the component of $u$ in the projection direction. Subtracting this parallel component leaves the perpendicular component $r$. The zero dot product verifies geometrically that $r$ is perpendicular to the direction $v$.
+So $u$ is split into two parts: $(3,3)$ goes along $v$, and $r=(1,-1)$ is perpendicular to $v$. The projection is like the shadow of $u$ on the line of $v$, and $r$ is the vertical drop from the end of $u$ to that line. This is why $r\cdot v=0$.

@@ -1,23 +1,39 @@
+# Exercise 15. Comparing Directions Using the Cosine of the Angle
+
 ## Question
 
-For $a=(1,2,1)$, $b=(2,4,2)$, and $c=(2,0,3)$, compute the cosine for every pair, order the pairwise angles, and explain the value for $a,b$.
+Given
+
+$$
+a=(1,2,1),\qquad b=(2,4,2),\qquad c=(2,0,3).
+$$
+
+For each pair, compute
+
+$$
+\frac{u\cdot v}{\|u\|\,\|v\|}.
+$$
+
+Order the pairs by increasing angle between the vectors. Explain why for $a$ and $b$ the value is $1$ even though the vectors have different lengths.
 
 ## Solution
 
-For the first pair, $b=2a$, and
+First the lengths and dot products:
 
-$$\frac{a\cdot b}{\|a\|\|b\|}=\frac{12}{\sqrt6\sqrt{24}}=1.$$
+$$
+\|a\|=\sqrt6,\qquad \|b\|=\sqrt{24}=2\sqrt6,\qquad \|c\|=\sqrt{13}
+$$
 
-This value is one because multiplying by a positive scalar changes length but not direction, so the angle between $a$ and $b$ is zero.
+$$
+a\cdot b=2+8+2=12,\qquad a\cdot c=2+0+3=5,\qquad b\cdot c=4+0+6=10
+$$
 
-For the pair $a,c$,
+Now the cosines:
 
-$$\frac{a\cdot c}{\|a\|\|c\|}=\frac{5}{\sqrt6\sqrt{13}}=\frac5{\sqrt{78}}.$$
+$$
+\cos(a,b)=\frac{12}{\sqrt6\cdot2\sqrt6}=1,\qquad \cos(a,c)=\frac{5}{\sqrt6\sqrt{13}}=\frac{5}{\sqrt{78}}\approx0.566,\qquad \cos(b,c)=\frac{10}{2\sqrt6\sqrt{13}}=\frac{5}{\sqrt{78}}\approx0.566
+$$
 
-For the remaining pair,
+A bigger cosine means a smaller angle. So the order is: first $(a,b)$ with angle $0^\circ$, then $(a,c)$ and $(b,c)$ with the same angle, about $55.5^\circ$.
 
-$$\frac{b\cdot c}{\|b\|\|c\|}=\frac{10}{\sqrt{24}\sqrt{13}}=\frac5{\sqrt{78}}.$$
-
-Because cosine decreases as the angle increases on $[0,\pi]$, the increasing-angle order is
-
-$$(a,b)\quad\text{first},\qquad (a,c)=(b,c)\quad\text{tied afterward}.$$
+For $a$ and $b$ the value is 1 because $b=2a$, so they point in the same direction. The formula divides by both lengths, so the length does not matter, only the direction. This is also why $(a,c)$ and $(b,c)$ have the same angle.

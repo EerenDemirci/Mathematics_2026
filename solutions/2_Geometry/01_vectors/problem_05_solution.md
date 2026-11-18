@@ -1,15 +1,21 @@
+# Exercise 5. Angle Between Vectors
+
 ## Question
 
-For $u=(1,1,0)$ and $v=(1,0,1)$, predict the angle type from the dot product, compute the angle, and compare.
+Given $u=(1,1,0)$ and $v=(1,0,1)$:
+
+1. Use the sign of $u\cdot v$ to predict the type of angle.
+2. Compute the angle.
+3. Compare the result with the prediction.
 
 ## Solution
 
-Since
+1. $u\cdot v=1\cdot1+1\cdot0+0\cdot1=1$. It is positive, so I expect an acute angle (less than $90^\circ$).
 
-$$u\cdot v=1>0,$$
+2. The angle comes from $\cos\varphi=\frac{u\cdot v}{\|u\|\,\|v\|}$. Both vectors have length $\sqrt2$:
 
-the angle should be acute. Both norms equal $\sqrt2$, so
+$$
+\cos\varphi=\frac{1}{\sqrt2\cdot\sqrt2}=\frac12\quad\Longrightarrow\quad \varphi=60^\circ
+$$
 
-$$\cos\theta=\frac{u\cdot v}{\|u\|\|v\|}=\frac{1}{2}.$$
-
-Therefore $\theta=\arccos(1/2)=\pi/3=60^\circ$. This is acute, agreeing with the qualitative prediction.
+3. $60^\circ$ is less than $90^\circ$, so the result agrees with the prediction.
