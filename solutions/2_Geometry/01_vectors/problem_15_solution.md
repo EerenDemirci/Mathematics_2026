@@ -31,7 +31,15 @@ $$
 Now the cosines:
 
 $$
-\cos(a,b)=\frac{12}{\sqrt6\cdot2\sqrt6}=1,\qquad \cos(a,c)=\frac{5}{\sqrt6\sqrt{13}}=\frac{5}{\sqrt{78}}\approx0.566,\qquad \cos(b,c)=\frac{10}{2\sqrt6\sqrt{13}}=\frac{5}{\sqrt{78}}\approx0.566
+\cos(a,b)=\frac{12}{\sqrt6\cdot2\sqrt6}=1
+$$
+
+$$
+\cos(a,c)=\frac{5}{\sqrt6\sqrt{13}}=\frac{5}{\sqrt{78}}\approx0.566
+$$
+
+$$
+\cos(b,c)=\frac{10}{2\sqrt6\sqrt{13}}=\frac{5}{\sqrt{78}}\approx0.566
 $$
 
 A bigger cosine means a smaller angle. So the order is: first $(a,b)$ with angle $0^\circ$, then $(a,c)$ and $(b,c)$ with the same angle, about $55.5^\circ$.
